@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="get_random_people",
-    version="1.0.7",
+    version="1.1.0",
     description="Generates random information of a person",
     author = "Ata Shaikh, Nicholes Viktor, InternetWebSoftwares",
     author_email="atasteven49@gmail.com",

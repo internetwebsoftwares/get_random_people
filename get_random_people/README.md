@@ -1,4 +1,4 @@
-# get_random_people &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Generic badge](https://img.shields.io/badge/version-1.0.7-<COLOR>.svg)](https://shields.io/)
+# get_random_people &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Generic badge](https://img.shields.io/badge/version-1.1.0-<COLOR>.svg)](https://shields.io/)
 A python package that generates huge dataset of fake, but real looking data of a person, that can be used to practice data science tools such as pandas. Useful to create graphs, tables etc.
 # Installation
 
@@ -72,7 +72,7 @@ from get_random_people import *
 
 get_highest_education() # returns a qualification
 get_phone_number([n]) # returns a phone number with n number of digits, if nothing is passed 10 digit number will be returned
-get_DOB() # returns a date of birth
+get_DOB(age) # returns a date of birth, must pass age as integer
 get_nationality() # returns a country name
 
 ```
