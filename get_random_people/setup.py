@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="get_random_people",
-    version="1.0.0",
+    version="1.0.6",
     description="Generates random information of a person",
     author = "Ata Shaikh, Nicholes Viktor, InternetWebSoftwares",
     author_email="atasteven49@gmail.com",
@@ -21,9 +21,10 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires = ">=3.6",
-    py_modules=["get_random_people"],
+    py_modules=["get_random_people", "countries", "countries_capital", "get_name_gender_religion","names", "qualifications"],
     package_dir={"": "src"},
-    install_requires=[]
+    install_requires=[],
+    include_package_data=True
 )
 
 # Command to build the package

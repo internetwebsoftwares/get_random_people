@@ -6,31 +6,6 @@ from get_name_gender_religion import get_name_gender_religion
 from uuid import uuid1
 from datetime import date, datetime
 
-def get_highest_education():
-    return qualifications[randint(0, len(qualifications) - 1)]
-
-def get_nationality():
-    random_index = randint(0,len(countries) - 1)
-    return countries[random_index]
-
-def get_DOB(age):
-    year = date.today().year - age
-    month = randint(1, 12)
-    day = randint(1, 28)
-    return datetime(year, month, day).strftime("%b %dth, %Y")
-
-def get_email(firstname, lastname, age):
-    domains = ("gmail", "yahoo", "outlook", "hotmail", "live")
-    random_index = randint(0, len(domains) - 1)
-    email = f"{firstname.lower()}{lastname.lower()}{date.today().year - age}@{domains[random_index]}.com"
-    return email
-
-def get_phone_number():
-    phone_number = "8"
-    for _ in range(0, 9):
-        phone_number += str(randint(0, 9))
-    return phone_number
-
 def get_address(nationality):
     country = nationality
     region = countries_capital[nationality]
@@ -51,8 +26,10 @@ def get_eye_color(skin_color):
 
     return eye_colors[randint(0, len(eye_colors) - 1)]
 
-def get_hair_style():
+def get_hair_style(gender):
     hair_styles = ['short', 'medium', 'long', 'bald', 'sides short center long']
+    if gender == "female":
+        hair_styles.remove("bald")
     return hair_styles[randint(0, len(hair_styles) - 1)]
 
 def get_hair_color(skin_color, age, hair_style):
@@ -70,6 +47,30 @@ def get_hair_color(skin_color, age, hair_style):
 
     return hair_color[randint(0, len(hair_color) - 1)]
 
+def get_email(firstname, lastname, age):
+    domains = ("gmail", "yahoo", "outlook", "hotmail", "live")
+    random_index = randint(0, len(domains) - 1)
+    email = f"{firstname.lower()}{lastname.lower()}{date.today().year - age}@{domains[random_index]}.com"
+    return email
+
+def get_highest_education():
+    return qualifications[randint(0, len(qualifications) - 1)]
+
+def get_nationality():
+    random_index = randint(0,len(countries) - 1)
+    return countries[random_index]
+
+def get_DOB(age):
+    year = date.today().year - age
+    month = randint(1, 12)
+    day = randint(1, 28)
+    return datetime(year, month, day).strftime("%b %dth, %Y")
+
+def get_phone_number(length = 10):
+    phone_number = str(randint(7, 9))
+    for _ in range(0, length - 1):
+        phone_number += str(randint(0, 9))
+    return phone_number
 
 def get_person():
     firstname, lastname, gender, religion = get_name_gender_religion()
@@ -77,8 +78,8 @@ def get_person():
     nationality = get_nationality()
     side_bussiness = ("Youtuber", "Vlogger", "Blogger", "Tiktoker", "Gamer")
     skin_color = get_skin_color()
-    hair_style = get_hair_style()
-    user = {
+    hair_style = get_hair_style(gender)
+    person = {
         "id": str(uuid1()),
         "firstname": firstname,
         "lastname": lastname,
@@ -102,11 +103,11 @@ def get_person():
         "height_in_feet": round(randint(15, 24) / 10 * 3.281, 1),
         "weight_in_kg": randint(35, 90)    
     }
-    return user
-  
-def get_peoples(totalUsers = 10):
-    users = []
-    for _ in range(0, totalUsers):
-        users.append(get_person())
+    return person
 
-    return users
+def get_peoples(totalPeoples = 10):
+    peoples = []
+    for _ in range(0, totalPeoples):
+        peoples.append(get_person())
+
+    return peoples

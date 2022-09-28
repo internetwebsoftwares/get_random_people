@@ -1,4 +1,4 @@
-# get_random_people &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Generic badge](https://img.shields.io/badge/version-1.0.1-<COLOR>.svg)](https://shields.io/)
+# get_random_people &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Generic badge](https://img.shields.io/badge/version-1.0.6-<COLOR>.svg)](https://shields.io/)
 A python package that generates huge dataset of fake, but real looking data of a person, that can be used to practice data science tools such as pandas. Useful to create graphs, tables etc.
 # Installation
 
@@ -64,6 +64,19 @@ print(user["nationality"]) #eg: England
  heightInFeet,
  weightInKg
 ```
+
+### Functions
+
+```
+from get_random_people import *
+
+get_highest_education() # returns a qualification
+get_phone_number([n]) # returns a phone number with n number of digits, if nothing is passed 10 digit number will be returned
+get_DOB() # returns a date of birth
+get_nationality() # returns a country name
+
+```
+
 &copy; 2022 InternetWebSoftwares | Ata Shaikh | Nicholes Viktor
 
 This repository is licensed under the MIT license
