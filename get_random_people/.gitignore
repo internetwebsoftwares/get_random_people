@@ -4,3 +4,4 @@ include/
 lib/
 get_random_people.egg-info/
 __pycache__/
+how_to_upload.txt

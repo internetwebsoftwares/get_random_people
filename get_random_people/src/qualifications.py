@@ -8,7 +8,7 @@ qualifications = [
         "Bachelor of Business Administration (B.B.A.)",
         "Integrated Law course (B.A + L.L.B.)",
         "Bachelor of Journalism and Mass Communication (B.J.M.)",
-        "Bachelor of Fashion Design (B.F.D.)"
+        "Bachelor of Fashion Design (B.F.D.)",
         "Bachelor of Science", 
         "Bachelor of Science (Artificial Intelligence)", 
         "Bachelor of Science (Information Technology)", 

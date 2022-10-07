@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="get_random_people",
-    version="1.1.1",
+    version="1.1.3",
     description="Generates random information of a person",
     author = "Ata Shaikh, Nicholes Viktor, InternetWebSoftwares",
     author_email="atasteven49@gmail.com",
@@ -21,17 +21,8 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires = ">=3.6",
-    py_modules=["get_random_people", "countries", "countries_capital", "get_name_gender_religion","names", "qualifications"],
+    py_modules=["get_random_people", "countries", "countries_capital", "get_name_gender_religion","names", "qualifications", "utils"],
     package_dir={"": "src"},
     install_requires=[],
     include_package_data=True
 )
-
-# Command to build the package
-# python -m build
-
-# twine is used to upload your package to pypi
-# pip install twine
-# command to upload package
-# python -m twine upload --repository testpypi dist/* -> upload on testpypi.org (optional step)
-# python -m twine upload --repository pypi dist/* -> upload on pypi.org
